@@ -1,0 +1,29 @@
+# Author: Vivek Myers <vivek.myers@gmail.com>
+# Date: 2024-09-28
+
+name: rldev
+channels:
+  - conda-forge
+  - nvidia
+dependencies:
+  - python=3.10
+  - jax=0.4.25
+  - scipy=1.12.0
+  - scikit-image=0.22.0
+  - chex=0.1.86
+  - dm-haiku=0.0.12
+  - six=1.16.0
+  - statsmodels=0.14.2
+  - pyinstrument=4.6
+  - matplotlib=3.9
+  - wandb=0.16.1
+  - cuda-nvcc
+  - cudnn=8.9
+  - pip=24.0
+  - flax
+  - pip:
+    - brax==0.10.5
+    - mujoco==3.2.3
+    - mujoco-mjx==3.2.3
+    - stack-data==0.6.3
+    - jax[cuda12]

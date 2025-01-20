@@ -1,0 +1,49 @@
+program: training.py
+method: bayes
+metric:
+  goal: maximize
+  name: eval/episode_success
+parameters:
+  discounting:
+    min: 0.96
+    max: 0.99
+    distribution: uniform
+  contrastive_loss_fn:
+    values:
+      - "symmetric_infonce"
+      - "infonce_backward"
+    distribution: categorical
+  seed:
+    min: 0
+    max: 100
+    distribution: int_uniform
+  env_name:
+    value: "ant"
+    distribution: constant
+command:
+  - ${env}
+  - python
+  - ${program}
+  - "--episode_length"
+  - "1000"
+  - "--num_envs"
+  - "1024"
+  - "--num_timesteps"
+  - "50000000"
+  - "--num_evals"
+  - "500"
+  - "--min_replay_size"
+  - "1000"
+  - "--max_replay_size"
+  - "10000"
+  - "--action_repeat"
+  - "1"
+  - "--batch_size"
+  - "256"
+  - "--unroll_length"
+  - "62"
+  - "--multiplier_num_sgd_steps"
+  - "1"
+  - --log_wandb
+  - ${args_no_boolean_flags}
+
