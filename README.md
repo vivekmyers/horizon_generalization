@@ -14,14 +14,12 @@ Forked from <https://github.com/MichalBortkiewicz/JaxGCRL>.
 ### Citation
 
 ```bibtex
-@misc{myers2025horizon,
-    author       = {Myers, Vivek and Ji, Catherine and Eysenbach, Benjamin},
-    eprint       = {2501.02709},
-    eprinttype   = {arXiv},
-    howpublished = {arXiv:2501.02709},
-    title        = {{Horizon Generalization} in {Reinforcement Learning}},
-    url          = {https://arxiv.org/abs/2501.02709},
-    year         = {2025},
+@inproceedings{myers2025horizon,
+    author    = {Myers, Vivek and Ji, Catherine and Eysenbach, Benjamin},
+    booktitle = {{International Conference} on {Learning Representations}},
+    title     = {{Horizon Generalization} in {Reinforcement Learning}},
+    url       = {https://arxiv.org/pdf/2501.02709},
+    year      = {2025},
 }
 ```
 
